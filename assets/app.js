@@ -226,10 +226,11 @@
         var formData = new FormData();
         formData.append("image", currentFile);
 
-        fetch("https://profile-ready-backend.onrender.com/api/image/remove-bg", {
+        fetch("https://profile-ready-backend.onrender.com/api/remove-bg", {
             method: "POST",
             body: formData,
         })
+
           .then(function (res) {
             if (!res.ok) throw new Error("remove-bg failed");
             return res.json();
