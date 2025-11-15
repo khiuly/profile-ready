@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Ready - ตั้งค่ารูป & เลือกชุด</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="logo"><span>PROFILE</span>READY</div>
+      <nav class="nav-links">
+        <a href="home.html" class="nav-link">หน้าแรก</a>
+        <a href="upload.html" class="nav-link">อัปโหลดรูป</a>
+        <a href="preview.html" class="nav-link active">ตั้งค่ารูป</a>
+        <button id="logout-btn" class="nav-logout-btn">ออกจากระบบ</button>
+      </nav>
+    </header>
+    <main class="layout-two-col">
+      <section class="preview-card">
+        <h1 class="page-title">เลือกชุด & ตั้งค่าสีพื้นหลัง</h1>
+        <p class="page-subtitle">อัปโหลดรูปแล้วเลือกชุดกับสีพื้นหลังได้เลย ระบบจะใช้ขนาดไฟล์ต้นฉบับอัตโนมัติ.</p>
+<div class="control-group">
+          <div class="control-label">เลือกชุดที่ต้องการใส่</div>
+          <div class="radio-row" id="outfit-row">
+            <!-- ชุดยูนิฟอร์มระดับมัธยม ชาย -->
+            <label class="radio-pill active">
+              <input type="radio" name="outfit" value="boys-school-uniform" checked>
+              <span>ชุดนักเรียนชาย</span>
+            </label>
+            <!-- ชุดยูนิฟอร์มระดับมัธยม หญิง -->
+            <label class="radio-pill">
+              <input type="radio" name="outfit" value="girls-school-uniform">
+              <span>ชุดนักเรียนหญิง</span>
+            </label>
+            <!-- ชุดนักศึกษามหาวิทยาลัย ชาย -->
+            <label class="radio-pill">
+              <input type="radio" name="outfit" value="mens-university-uniform">
+              <span>ชุดนักศึกษาชาย</span>
+            </label>
+            <!-- ชุดนักศึกษามหาวิทยาลัย หญิง -->
+            <label class="radio-pill">
+              <input type="radio" name="outfit" value="womens-university-uniform">
+              <span>ชุดนักศึกษาหญิง</span>
+            </label>
+            <!-- ชุดสูททางการ ชาย -->
+            <label class="radio-pill">
+              <input type="radio" name="outfit" value="mansuit">
+              <span>ชุดสูทชาย</span>
+            </label>
+            <!-- ชุดสูททางการ หญิง -->
+            <label class="radio-pill">
+              <input type="radio" name="outfit" value="womensuit">
+              <span>ชุดสูทหญิง</span>
+            </label>
+            <!-- ชุดฮอกวอตส์ Hufflepuff -->
+            <label class="radio-pill">
+              <input type="radio" name="outfit" value="hogwarts-hufflepuff">
+              <span>ชุดฮอกวอตส์ Hufflepuff</span>
+            </label>
+            <!-- ชุดฮอกวอตส์ Gryffindor -->
+            <label class="radio-pill">
+              <input type="radio" name="outfit" value="hogwarts-gryffindor">
+              <span>ชุดฮอกวอตส์ Gryffindor</span>
+            </label>
+            <!-- ชุดฮอกวอตส์ Ravenclaw -->
+            <label class="radio-pill">
+              <input type="radio" name="outfit" value="hogwarts-ravenclaw">
+              <span>ชุดฮอกวอตส์ Ravenclaw</span>
+            </label>
+            <!-- ชุดฮอกวอตส์ Slytherin -->
+            <label class="radio-pill">
+              <input type="radio" name="outfit" value="hogwarts-slytherin">
+              <span>ชุดฮอกวอตส์ Slytherin</span>
+            </label>
+            <!-- ชุดครุยรับปริญญา แดง-ทอง -->
+            <label class="radio-pill">
+              <input type="radio" name="outfit" value="thai-grad-red">
+              <span>ครุยรับปริญญา แดง-ทอง</span>
+            </label>
+            <!-- ชุดครุยรับปริญญา สายสะพายขาว -->
+            <label class="radio-pill">
+              <input type="radio" name="outfit" value="thai-grad-white-sash">
+              <span>ครุยรับปริญญา สายสะพายขาว</span>
+            </label>
+            <!-- ชุดครุยรับปริญญา สายสะพายน้ำเงิน -->
+            <label class="radio-pill">
+              <input type="radio" name="outfit" value="thai-grad-blue-sash">
+              <span>ครุยรับปริญญา สายสะพายน้ำเงิน</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- ตัวเลื่อนปรับขนาดชุด -->
+        <div class="control-group">
+          <div class="control-label">ปรับขนาดชุด (เล็ก – ใหญ่)</div>
+          <input type="range" id="outfit-scale" min="50" max="150" value="100" step="5" class="range-input">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">ยืดความกว้างไหล่ (ซ้าย–ขวา)</div>
+          <input type="range" id="outfit-width-scale" min="80" max="140" value="100" step="5" class="range-input">
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">ยืดความสูงของชุด (บน–ล่าง)</div>
+          <input type="range" id="outfit-height-scale" min="80" max="140" value="100" step="5" class="range-input">
+        </div>
+
+        <p class="hint-text" style="font-size:11px; margin-top:-4px;">ลากชุดบนรูปเพื่อปรับตำแหน่ง จากนั้นเลื่อนสไลด์เพื่อปรับขนาด</p>
+
+        <!-- ตัวเลื่อนปรับซูมรูปต้นฉบับ -->
+        <div class="control-group">
+          <div class="control-label">ปรับซูมรูปถ่าย (เล็ก – ใหญ่)</div>
+          <input type="range" id="photo-scale" min="100" max="250" value="100" step="10" class="range-input">
+        </div>
+        <p class="hint-text" style="font-size:11px; margin-top:-4px;">ลากภาพเพื่อปรับตำแหน่ง จากนั้นเลื่อนสไลด์เพื่อปรับซูม</p>
+
+        <div class="control-group">
+          <div class="control-label">ขนาดไฟล์ต้นฉบับ</div>
+          <div class="meta-chip">
+            <span class="meta-dot"></span>
+            <span id="size-info">กำลังอ่านขนาดไฟล์ต้นฉบับ…</span>
+          </div>
+        </div>
+
+<div class="control-group">
+  <div class="control-label">สีพื้นหลังของรูป</div>
+  <div class="bg-palette-row">
+    <button type="button" class="bg-swatch" data-bg-color="#041B2D"></button>
+    <button type="button" class="bg-swatch" data-bg-color="#004E9A"></button>
+    <button type="button" class="bg-swatch" data-bg-color="#428CD4"></button>
+    <button type="button" class="bg-swatch" data-bg-color="#FF9CDA"></button>
+    <button type="button" class="bg-swatch" data-bg-color="#EA4492"></button>
+    <input type="color" id="bg-color-input" value="#ffffff" class="color-input">
+    <button type="button" id="bg-reset-btn" class="chip-btn">รีเซ็ตเป็นพื้นหลังสีขาว</button>
+  </div>
+  <p class="hint-text" style="font-size:11px;margin-top:4px;">
+    เลือกสีพื้นหลังจากพาเลต หรือปรับสีเองได้ ระบบจะใช้สีนี้เป็นพื้นหลังของไฟล์รูปที่สร้าง
+  </p>
+</div>
+
+
+        <div class="actions-row">
+          <button class="primary-btn" id="generate-btn">สร้างรูป & ไปหน้าดาวน์โหลด</button>
+          <button class="secondary-btn" onclick="window.location.href='upload.html'">กลับไปแก้รูปต้นฉบับ</button>
+        </div>
+        <p class="hint-text" id="preview-message"></p>
+      </section>
+
+      <section class="preview-card">
+        <h2 class="page-title">พรีวิวรูปถ่าย</h2>
+        <div class="preview-frame">
+          <div class="photo-border">
+            <img id="preview-img" alt="พรีวิวรูปถ่าย">
+            <div id="preview-placeholder" class="photo-placeholder" style="display:none;">
+              กำลังโหลดรูป…
+            </div>
+            <!-- เปลี่ยนเป็นรูปชุดที่สามารถลากและปรับขนาดได้ -->
+            <img id="preview-outfit" class="outfit-overlay" alt="ชุดที่เลือก" style="display:none;" />
+          </div>
+        </div>
+        <div class="download-info">
+          <span class="meta-chip">
+            <span class="meta-dot"></span>
+            คุณสามารถเปลี่ยนชุดและสีพื้นหลังได้ตลอด ก่อนกดสร้างรูป
+          </span>
+        </div>
+      </section>
+    </main>
+  </div>
+<script src="assets/app.js"></script>
+</body>
+</html>

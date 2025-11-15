@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Ready - อัปโหลดรูป</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="logo"><span>PROFILE</span>READY</div>
+      <nav class="nav-links">
+        <a href="home.html" class="nav-link">หน้าแรก</a>
+        <a href="upload.html" class="nav-link active">อัปโหลดรูป</a>
+        <button id="logout-btn" class="nav-logout-btn">ออกจากระบบ</button>
+      </nav>
+    </header>
+    <main class="layout-two-col">
+      <section class="upload-card">
+        <h1 class="page-title">อัปโหลดหรือถ่ายรูปใหม่</h1>
+        <p class="page-subtitle">ใช้ไฟล์รูปหน้าตรง พื้นหลังเรียบ ใบหน้าชัดเจน เพื่อให้ได้รูปถ่ายบัตรที่ดูดีที่สุด.</p>
+
+        <div class="upload-dropzone">
+          <div class="small-label">เลือกรูปภาพจากเครื่อง หรือถ่ายใหม่</div>
+          <div class="file-input">
+            <input type="file" id="file-input" accept="image/*" capture="user">
+          </div>
+          <p>รองรับไฟล์ JPG / PNG</p>
+        </div>
+
+        <div class="actions-row">
+          <button class="primary-btn" id="auto-remove-bg-btn">ลบพื้นหลังให้อัตโนมัติ</button>
+          <button class="secondary-btn" id="go-preview-btn">ไปหน้าตั้งค่ารูป</button>
+          <button class="secondary-btn" onclick="window.location.href='home.html'">กลับหน้าแรก</button>
+        </div>
+        <p class="hint-text" id="upload-message"></p>
+      </section>
+      <section class="upload-card">
+        <h2 class="page-title">ตัวอย่างรูปที่อัปโหลด</h2>
+        <div class="preview-frame">
+          <div class="photo-border">
+            <img id="upload-preview" alt="ตัวอย่างรูปที่อัปโหลด" style="display:none;">
+            <div id="upload-placeholder" class="photo-placeholder">
+              ยังไม่มีรูป<br>กรุณาอัปโหลดก่อน
+            </div>
+          </div>
+        </div>
+        <div class="download-info">
+          <span class="meta-chip">
+            <span class="meta-dot"></span>
+            แนะนำใช้รูปถ่ายแนวตั้ง เห็นใบหน้าชัด
+          </span>
+        </div>
+      </section>
+    </main>
+  </div>
+<script src="assets/app.js"></script>
+</body>
+</html>

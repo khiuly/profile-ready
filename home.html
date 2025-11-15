@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Ready - โฮมเพจ</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="logo"><span>PROFILE</span>READY</div>
+      <nav class="nav-links">
+        <a href="home.html" class="nav-link active">หน้าแรก</a>
+        <a href="upload.html" class="nav-link">อัปโหลดรูป</a>
+        <button id="logout-btn" class="nav-logout-btn">ออกจากระบบ</button>
+      </nav>
+    </header>
+    <main class="main-content">
+      <section class="hero-card">
+        <div class="hero-kicker">เว็บทำรูปถ่ายขนาด 2 นิ้วออนไลน์</div>
+        <h1>แปลงเซลฟี่ให้เป็นรูปถ่ายบัตรในไม่กี่คลิก</h1>
+        <p>ถ่ายหรืออัปโหลดรูปตัวเอง เลือกขนาดรูป (เช่น 2 นิ้ว) และเลือกชุดเสื้อสูทหรือชุดนักศึกษา ระบบจะช่วยจัดเฟรมและเตรียมไฟล์ให้พร้อมดาวน์โหลด.</p>
+        <div class="hero-actions">
+          <button class="primary-btn" onclick="window.location.href='upload.html'">เริ่มอัปโหลดรูป</button>
+          <button class="secondary-btn" onclick="window.location.href='preview.html'">ไปหน้าพรีวิว</button>
+        </div>
+      </section>
+      <section class="stats-card">
+        <h2 class="page-title">ขั้นตอนการใช้งาน</h2>
+        <p class="page-subtitle">ทำ 5 ขั้นตอนง่าย ๆ เพื่อได้ไฟล์รูปถ่ายพร้อมใช้งาน.</p>
+        <div class="stats-grid">
+          <div class="stat-pill">
+            <div class="stat-label">1) สมัคร/ล็อกอิน</div>
+            <div class="stat-value">สร้างไอดีของคุณ</div>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-label">2) อัปโหลดรูป</div>
+            <div class="stat-value">เลือกเซลฟี่ที่ชัดที่สุด</div>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-label">3) ตั้งค่าขนาด</div>
+            <div class="stat-value">2x2 นิ้ว หรือขนาดอื่น ๆ</div>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-label">4) เลือกชุด</div>
+            <div class="stat-value">สูท / ชุดนักศึกษา</div>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-label">5) ดาวน์โหลด</div>
+            <div class="stat-value">ไฟล์ JPG พร้อมพิมพ์</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+<script src="assets/app.js"></script>
+</body>
+</html>

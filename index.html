@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Ready - เข้าสู่ระบบ</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="auth-page">
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="logo"><span>PROFILE</span>READY</div>
+    </header>
+    <main class="auth-container">
+      <section class="card auth-card">
+        <h1>ยินดีต้อนรับ 🎟</h1>
+        <p class="subtitle">ล็อกอินเพื่อเริ่มทำรูปถ่ายขนาด 2 นิ้วจากเซลฟี่ของคุณ.</p>
+
+        <div class="tab-switch">
+          <button class="tab-button active" data-tab="login">เข้าสู่ระบบ</button>
+          <button class="tab-button" data-tab="register">สมัครสมาชิก</button>
+        </div>
+
+        <form id="login-form" class="auth-form active" autocomplete="off">
+          <label>
+            อีเมลหรือชื่อผู้ใช้
+            <input type="text" id="login-username" required>
+          </label>
+          <label>
+            รหัสผ่าน
+            <input type="password" id="login-password" required>
+          </label>
+          <button type="submit" class="primary-btn">เข้าสู่ระบบ</button>
+        </form>
+
+        <form id="register-form" class="auth-form" autocomplete="off">
+          <label>
+            อีเมลหรือชื่อผู้ใช้
+            <input type="text" id="register-username" required>
+          </label>
+          <label>
+            รหัสผ่าน
+            <input type="password" id="register-password" required>
+          </label>
+          <label>
+            ยืนยันรหัสผ่าน
+            <input type="password" id="register-password2" required>
+          </label>
+          <button type="submit" class="primary-btn">สมัครสมาชิก</button>
+        </form>
+
+        <p class="hint-text" id="auth-message"></p>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

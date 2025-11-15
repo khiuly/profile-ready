@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Ready - ดาวน์โหลดรูป</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="logo"><span>PROFILE</span>READY</div>
+      <nav class="nav-links">
+        <a href="home.html" class="nav-link">หน้าแรก</a>
+        <a href="upload.html" class="nav-link">อัปโหลดรูป</a>
+        <a href="preview.html" class="nav-link">ตั้งค่ารูป</a>
+        <a href="download.html" class="nav-link active">ดาวน์โหลด</a>
+        <button id="logout-btn" class="nav-logout-btn">ออกจากระบบ</button>
+      </nav>
+    </header>
+    <main class="layout-two-col">
+      <section class="download-card">
+        <h2>ดาวน์โหลดรูปถ่ายของคุณ</h2>
+        <p>ไฟล์รูปถูกแปลงเป็นขนาดที่คุณเลือกเรียบร้อยแล้ว สามารถกดดาวน์โหลดเพื่อนำไปพิมพ์หรือส่งออนไลน์ได้ทันที.</p>
+
+        <div class="actions-row">
+          <a id="download-link" class="primary-btn" href="#" download="photo-id.jpg">ดาวน์โหลดไฟล์ JPG</a>
+          <button class="secondary-btn" onclick="window.location.href='preview.html'">กลับไปแก้ขนาด/ชุด</button>
+        </div>
+
+        <div class="download-info">
+          <span class="meta-chip">
+            <span class="meta-dot"></span>
+            ขนาด: <span id="download-size-label">–</span>
+          </span>
+          <span class="meta-chip">
+            <span class="meta-dot"></span>
+            เคล็ดลับ: แนะนำพิมพ์ที่ความละเอียด 300 DPI
+          </span>
+        </div>
+        <p class="hint-text" id="download-message"></p>
+      </section>
+
+      <section class="download-card">
+        <h2 class="page-title">ตัวอย่างไฟล์สุดท้าย</h2>
+        <div class="download-preview">
+          <div class="photo-border">
+            <img id="final-img" alt="ไฟล์รูปถ่ายที่สร้างแล้ว">
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+<script src="assets/app.js"></script>
+</body>
+</html>
