@@ -226,7 +226,7 @@
         var formData = new FormData();
         formData.append("image", currentFile);
 
-        fetch("http://localhost:3000/api/remove-bg", {
+        fetch("https://render.com/docs/web-services#port-binding/api/remove-bg", {
           method: "POST",
           body: formData
         })
